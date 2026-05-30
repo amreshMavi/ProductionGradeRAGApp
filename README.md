@@ -1,12 +1,10 @@
-# 🤖 Production-Grade RAG AI Agent
+#  Production-Grade RAG AI Agent
 
 A production-ready Retrieval-Augmented Generation (RAG) application built in Python, featuring document ingestion, vector search, and a chat interface — with enterprise-grade observability, rate limiting, throttling, and concurrency control powered by **Inngest**.
 
-> Built following the [Tech With Tim tutorial](https://www.youtube.com/watch?v=AUQJ9eeP-Ls) — "How to Build a Production-Ready RAG AI Agent in Python (Step-by-Step)"
-
 ---
 
-## 🧠 What Is This?
+##  What Is This?
 
 Most RAG tutorials show you how to build something that *works*. This project shows you how to build something you can actually *ship*. It adds the production infrastructure that hobby projects typically miss:
 
@@ -49,13 +47,13 @@ User → Frontend (Chat UI)
 
 ## ✨ Features
 
-- 📄 **PDF Ingestion** — Upload and process PDF documents into a vector store
-- 🔍 **Semantic Search** — Query your documents using natural language
-- 🤖 **AI-Powered Answers** — Get accurate, context-grounded responses via RAG
-- 🔁 **Automatic Retries** — Failed steps are retried without re-running the entire pipeline
-- 🚦 **Rate Limiting** — Prevent API overuse with built-in throttling
-- ⚡ **Concurrency Control** — Safely handle multiple simultaneous ingestion jobs
-- 🔭 **Observability** — Full step-by-step visibility via the Inngest Dev Server dashboard
+-  **PDF Ingestion** — Upload and process PDF documents into a vector store
+-  **Semantic Search** — Query your documents using natural language
+-  **AI-Powered Answers** — Get accurate, context-grounded responses via RAG
+-  **Automatic Retries** — Failed steps are retried without re-running the entire pipeline
+-  **Rate Limiting** — Prevent API overuse with built-in throttling
+-  **Concurrency Control** — Safely handle multiple simultaneous ingestion jobs
+-  **Observability** — Full step-by-step visibility via the Inngest Dev Server dashboard
 
 ---
 
@@ -86,7 +84,7 @@ venv\Scripts\activate           # Windows
 ### 3. Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+uv add fastapi inngest llama-index-core llama-index-readers-file python-dotenv qdrant-client uvicorn streamlit openai
 ```
 
 ### 4. Configure Environment Variables
@@ -95,10 +93,6 @@ Create a `.env` file in the root directory:
 
 ```env
 OPENAI_API_KEY=your_openai_api_key
-QDRANT_URL=your_qdrant_cloud_url
-QDRANT_API_KEY=your_qdrant_api_key
-INNGEST_EVENT_KEY=your_inngest_event_key
-INNGEST_SIGNING_KEY=your_inngest_signing_key
 ```
 
 ### 5. Start the Inngest Dev Server
@@ -112,10 +106,8 @@ This opens the Inngest dashboard at `http://localhost:8288`, where you can monit
 ### 6. Run the Application
 
 ```bash
-python main.py
+uvicorn main:app --reload
 ```
-
-The app will be available at `http://localhost:8000`.
 
 ---
 
@@ -180,16 +172,10 @@ Every function invocation is visible in the Inngest dashboard — inputs, output
 
 ## 📚 Resources
 
-- 📹 [Original Tutorial Video](https://www.youtube.com/watch?v=AUQJ9eeP-Ls) — Tech With Tim
 - 📖 [Inngest Python Docs](https://www.inngest.com/docs/apps)
 - 🗄️ [Qdrant Documentation](https://qdrant.tech/documentation/)
 - 🦙 [LlamaIndex Documentation](https://docs.llamaindex.ai/)
 
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome. Feel free to open a PR or raise an issue.
 
 ---
 
