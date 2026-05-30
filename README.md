@@ -15,7 +15,7 @@ Most RAG tutorials show you how to build something that *works*. This project sh
 
 ---
 
-## 🏗️ Architecture & Tech Stack
+##  Architecture & Tech Stack
 
 ```
 User → Frontend (Chat UI)
@@ -45,7 +45,7 @@ User → Frontend (Chat UI)
 
 ---
 
-## ✨ Features
+##  Features
 
 -  **PDF Ingestion** — Upload and process PDF documents into a vector store
 -  **Semantic Search** — Query your documents using natural language
@@ -57,7 +57,7 @@ User → Frontend (Chat UI)
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -111,7 +111,7 @@ uvicorn main:app --reload
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 ProductionGradeRAGApp/
@@ -132,7 +132,7 @@ ProductionGradeRAGApp/
 
 ---
 
-## 🔄 How It Works
+##  How It Works
 
 ### Document Ingestion Pipeline
 
@@ -154,7 +154,7 @@ ProductionGradeRAGApp/
 
 ---
 
-## ⚙️ Production Features Deep Dive
+##  Production Features Deep Dive
 
 ### Rate Limiting
 Inngest throttles how many ingestion or query jobs run per minute, protecting you from hitting OpenAI API limits during high traffic.
@@ -170,7 +170,7 @@ Every function invocation is visible in the Inngest dashboard — inputs, output
 
 ---
 
-## 📚 Resources
+##  Resources
 
 - 📖 [Inngest Python Docs](https://www.inngest.com/docs/apps)
 - 🗄️ [Qdrant Documentation](https://qdrant.tech/documentation/)
